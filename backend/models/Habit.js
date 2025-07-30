@@ -24,3 +24,4 @@ const habitSchema = new mongoose.Schema({
 });
 
 const Habit = mongoose.model("Habit", habitSchema);
+export default Habit;

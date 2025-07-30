@@ -8,6 +8,7 @@ const app = express(); //this is to make it run
 const PORT = process.env.PORT || 5001;
 
 connectDB();
+app.use(express.json()); //this middeleware is to be able to use json
 
 app.use("/api/habits", habitRoutes); //For any request that starts with /api/habits, use the routes defined in habitRoutes
 
