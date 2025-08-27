@@ -1,0 +1,65 @@
+/* Reset default body margin/padding */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* match your container background */
+}
+
+/* Make sure the main container fills the viewport */
+.main-container {
+  height: 100vh; /* full screen height */
+  display: flex; /* flexbox for centering */
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  background: linear-gradient(135deg, #121212, #1e1e1e, #163d16);
+  width: 100%;
+  overflow: hidden; /* optional: prevents tiny scrollbars */
+}
+
+/* Stack text + button vertically and center them */
+.element-container {
+  display: flex;
+  flex-direction: column; /* stack items top → bottom */
+  align-items: center; /* center items horizontally */
+  text-align: center; /* center text inside */
+}
+
+/* Some spacing for readability */
+.text-container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  color: #39ff14; /* brighter neon green */
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.text-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+/* Style your button */
+.button-container button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #228b22;
+  color: #fff;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.button-container button:hover {
+  background-color: #32cd32;
+  transform: scale(1.05);
+}
+
+.button-container button:hover {
+  background-color: #32cd32; /* lighter green on hover */
+}
