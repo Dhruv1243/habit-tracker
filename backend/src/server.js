@@ -1,21 +1,25 @@
+// server.js
+import "dotenv/config"; // <-- runs before other imports
+
 import express from "express";
-import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 
-import { connectDB } from "../config/db.js";
+import { connectDB } from "./config/db.js";
 import habitRoutes from "./routes/habitRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
-dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 connectDB();
 
 app.use(express.json());
-app.use(cors({ origin: true, credentials: true }));
+
+// Since you're using Authorization headers (not cookies), you don't need credentials:true:
+app.use(cors({ origin: ["http://localhost:5173", "http://localhost:3000"] }));
+
 app.use(helmet());
 app.use(morgan("dev"));
 

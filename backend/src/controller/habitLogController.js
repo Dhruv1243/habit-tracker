@@ -1,7 +1,7 @@
 // controllers/habitLogController.js
-import Habit from "../../models/Habit.js";
-import HabitLog from "../../models/HabitLog.js";
-import { toUtcMidnight } from "../../utils/date.js";
+import Habit from "../models/Habit.js";
+import HabitLog from "../models/HabitLog.js";
+import { toUtcMidnight } from "../utils/date.js";
 
 // Ensure the habit is owned by the current user
 async function assertHabitOwnership(userId, habitId) {

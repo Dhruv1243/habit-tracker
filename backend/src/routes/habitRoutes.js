@@ -1,6 +1,7 @@
 import express from "express";
 import * as habitController from "../controller/habitController.js";
 import auth from "../middleware/auth.js";
+import habitLogRoutes from "./habitLogRoutes.js";
 
 const router = express.Router();
 

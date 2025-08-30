@@ -1,5 +1,5 @@
 // controllers/habitController.js
-import Habit from "../../models/Habit.js";
+import Habit from "../models/Habit.js";
 
 export async function getAllHabits(req, res) {
   try {
